@@ -18,6 +18,7 @@ Este documento describe el proceso de implementación de un balanceador de carga
     export INSTANCE="TU_VALOR_AQUI"  # Ejemplo: nucleus-jumphost-624
     export FIREWALL="TU_VALOR_AQUI"  # Ejemplo: accept-tcp-rule-112
     export ZONE="TU_VALOR_AQUI"      # Ejemplo: us-east1-c
+    export ID_PROYECTO="TU_VALOR_AQUI" # Ejemplo: qwiklabs-gcp-01-32179ad5be46 
     ```
 
     Finalmente, descarga y ejecuta el script con estos comandos:
