@@ -23,13 +23,21 @@ Este documento describe el proceso de implementación de un balanceador de carga
 
     Finalmente, descarga y ejecuta el script con estos comandos:
     ```
-    curl -LO https://github.com/LourdesAye/LAB_GCP_implementacion_balanceador_de_cargas/blob/c77089ebacb825484cf528b8319c7cc2eae81ba1/script/despliegue_gcp.sh
+    curl -LO https://raw.githubusercontent.com/LourdesAye/LAB_GCP_implementacion_balanceador_de_cargas/main/script/despliegue_gcp.sh
     chmod +x despliegue_gcp.sh
     ./despliegue_gcp.sh
     ```
     * curl -LO URL :Descarga el script desde GitHub y lo guarda con su nombre original.
     * chmod +x despliegue_gcp.sh → Asigna permisos de ejecución al script.
     * ./despliegue_gcp.sh → Ejecuta el script en la terminal.
+
+> [!NOTE]
+> Una vez finalizada la ejecución se puede verificar el estado de las instancias con el comando :
+> ```
+> gcloud compute backend-services get-health web-server-backend --global
+> ```
+> Si todo está bien, debería mostrar las instancias con estado HEALTHY (lo que significaría que el balanceador de carga está funcionando correctamente).
+> También, se puede probar que el balanceador de carga funciona accediendo a su dirección IP (que aparece en pantalla al crear la Forwarding Rule). En el navegador se debe poner algo similar a : "http://34.110.194.137". Puede refrescar la página varias veces o abrirla en una ventana de incógnito para que vayan apareciendo las distintas instancias. 
 
 ## ¿Qué es un Balanceador de Cargas (Load Balancing)?
 Un balanceador de carga es un dispositivo o software que distribuye el tráfico de red o las solicitudes de aplicación entre múltiples servidores o recursos disponibles, con el objetivo de optimizar el rendimiento, mejorar la disponibilidad y garantizar la tolerancia a fallos.
