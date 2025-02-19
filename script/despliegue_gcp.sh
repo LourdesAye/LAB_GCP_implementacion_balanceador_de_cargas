@@ -12,6 +12,17 @@ fi
 
 export REGION="${ZONE%-*}"  # Extrae la región de la zona
 
+# Obtener el ID del proyecto automáticamente
+ID_PROYECTO=$(gcloud config get-value project 2> /dev/null)
+
+# Verificar si se obtuvo correctamente
+if [[ -z "$ID_PROYECTO" || "$ID_PROYECTO" == "(unset)" ]]; then
+  echo "⚠️ Error: No hay un proyecto configurado en gcloud. Configúralo antes de ejecutar el script."
+  exit 1
+fi
+
+echo "🚀 Implementando en el proyecto: $ID_PROYECTO"
+
 echo "🚀 Iniciando la implementación en Google Cloud..."
 
 # 1️⃣ Crear una instancia de VM
