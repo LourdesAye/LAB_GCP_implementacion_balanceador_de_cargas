@@ -1,15 +1,11 @@
 # Laboratorio Práctico de Google Cloud Platform (GCP) : "Implementación de Balanceo de Carga en Compute Engine" (Implement Load Balancing on Compute Engine). 
 
 ## Introducción
-Este documento describe el proceso de implementación de un balanceador de carga en Google Cloud Platform (GCP), detallando cada paso y los comandos empleados. Es parte de un laboratorio práctico en el que se configuró una infraestructura tolerante a fallos basada en instancias de máquinas virtuales ejecutando NGINX.
+Este documento describe el proceso de implementación de un balanceador de carga en Google Cloud Platform (GCP). Es parte de un laboratorio práctico en el que se configuró una infraestructura tolerante a fallos basada en instancias de máquinas virtuales ejecutando NGINX.
 
 ### Detalles de la ejecución de comandos
 
-* **Opción 1**: Ejecutar comandos manualmente (Se deben ingresar los comandos uno por uno en la Google Cloud Shell.)  
-📄 Archivo: [Comandos para la Implementación de Balanceo de Carga en Compute Engine](https://github.com/LourdesAye/LAB_GCP_implementacion_balanceador_de_cargas/blob/c77089ebacb825484cf528b8319c7cc2eae81ba1/comandos/comandos.txt)
-
-* **Opción 2**: Ejecutar el script automáticamente  
-📄 Archivo: [despliegue GCP a través de un script](https://github.com/LourdesAye/LAB_GCP_implementacion_balanceador_de_cargas/blob/c77089ebacb825484cf528b8319c7cc2eae81ba1/script/despliegue_gcp.sh)
+Archivo: [despliegue GCP a través de un script](https://github.com/LourdesAye/LAB_GCP_implementacion_balanceador_de_cargas/blob/c77089ebacb825484cf528b8319c7cc2eae81ba1/script/despliegue_gcp.sh)
 
   Este script automatiza la ejecución de los comandos necesarios para configurar el balanceador de carga. Antes de ejecutarlo, es necesario definir las variables de entorno:
 
@@ -30,6 +26,10 @@ Este documento describe el proceso de implementación de un balanceador de carga
     * curl -LO URL :Descarga el script desde GitHub y lo guarda con su nombre original.
     * chmod +x despliegue_gcp.sh → Asigna permisos de ejecución al script.
     * ./despliegue_gcp.sh → Ejecuta el script en la terminal.
+
+Videos de ejecución:
+Video de la ejecución del script: (ver aquí)[link]
+Video de la ejecución desde la Consola de GCP (Interfaz de Usuario): (ver aquí)[https://youtu.be/B_-hMljJ_1Y]
 
 > [!NOTE]
 > Una vez finalizada la ejecución se puede verificar el estado de las instancias con el comando :
