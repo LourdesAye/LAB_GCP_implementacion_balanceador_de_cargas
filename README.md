@@ -9,27 +9,25 @@ Archivo: [despliegue GCP a través de un script](https://github.com/LourdesAye/L
 
   Este script automatiza la ejecución de los comandos necesarios para configurar el balanceador de carga. Antes de ejecutarlo, es necesario definir las variables de entorno:
 
-    ```
     # Reemplaza los valores según los indicados en el laboratorio antes de ejecutar
     export INSTANCE="TU_VALOR_AQUI"  # Ejemplo: nucleus-jumphost-624
     export FIREWALL="TU_VALOR_AQUI"  # Ejemplo: accept-tcp-rule-112
     export ZONE="TU_VALOR_AQUI"      # Ejemplo: us-east1-c
     export ID_PROYECTO="TU_VALOR_AQUI" # Ejemplo: qwiklabs-gcp-01-32179ad5be46 
-    ```
-
-    Finalmente, descarga y ejecuta el script con estos comandos:
-    ```
+    
+Finalmente, descarga y ejecuta el script con estos comandos:
+    
     curl -LO https://raw.githubusercontent.com/LourdesAye/LAB_GCP_implementacion_balanceador_de_cargas/main/script/despliegue_gcp.sh
     chmod +x despliegue_gcp.sh
     ./despliegue_gcp.sh
-    ```
-    * curl -LO URL :Descarga el script desde GitHub y lo guarda con su nombre original.
-    * chmod +x despliegue_gcp.sh → Asigna permisos de ejecución al script.
-    * ./despliegue_gcp.sh → Ejecuta el script en la terminal.
+    
+* curl -LO URL :Descarga el script desde GitHub y lo guarda con su nombre original.
+* chmod +x despliegue_gcp.sh → Asigna permisos de ejecución al script.
+* ./despliegue_gcp.sh → Ejecuta el script en la terminal.
 
-Videos de ejecución:
-Video de la ejecución del script: (ver aquí)[link]
-Video de la ejecución desde la Consola de GCP (Interfaz de Usuario): (ver aquí)[https://youtu.be/B_-hMljJ_1Y]
+#### Videos de ejecución:   
+Video de la ejecución del script: [ver aquí](link)   
+Video de la ejecución desde la Consola de GCP (Interfaz de Usuario): [ver aquí](https://youtu.be/B_-hMljJ_1Y)   
 
 > [!NOTE]
 > Una vez finalizada la ejecución se puede verificar el estado de las instancias con el comando :
@@ -42,11 +40,11 @@ Video de la ejecución desde la Consola de GCP (Interfaz de Usuario): (ver aquí
 ## ¿Qué es un Balanceador de Cargas (Load Balancing)?
 Un balanceador de carga es un dispositivo o software que distribuye el tráfico de red o las solicitudes de aplicación entre múltiples servidores o recursos disponibles, con el objetivo de optimizar el rendimiento, mejorar la disponibilidad y garantizar la tolerancia a fallos.
 
-![Esquema en el que se aplica Load Balancer](https://github.com/user-attachments/assets/8cfabbbf-a56c-4208-a85e-c46aa4ed810a)
+![Esquema en el que se aplica Load Balancer](https://github.com/user-attachments/assets/bc8ff36a-529f-43d6-9320-d461048e76f7)
 
 Definición de Google: *" The job of a load balancer is to distribute user traffic across multiple instances of an application. By spreading the load, load balancing reduces the risk that applications experience performance issues."*
 
-![Definición de Load Balancer por Google](https://github.com/user-attachments/assets/fadbcc68-ef1d-479c-b09c-b7c82a8cea9f)
+![Definición de Load Balancer por Google](https://github.com/user-attachments/assets/937d0367-46e4-45d1-9029-9cff982b14a7)
 
 En este caso, es un servicio brindado por Google Cloud Platform, compuesto por:
 * **Forwarding Rule** (recibe el tráfico HTTP (puerto 80) e indica hacia dónde enviarlo: al proxy inverso HTTP. No decide directamente a qué VM o backend va el tráfico, esa decisión la toma el proxy y el URL Map.)
