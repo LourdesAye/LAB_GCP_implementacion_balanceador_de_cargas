@@ -1,4 +1,4 @@
-# Laboratorio Práctico de Google Cloud Platform (GCP) : "Implementación de Balanceo de Carga en Compute Engine" (Implement Load Balancing on Compute Engine). 
+# Laboratorio Práctico de Google Cloud Platform (GCP) : "Implementación de un Balanceador de Cargas en Compute Engine" (Implement Load Balancing on Compute Engine). 
 
 ## Introducción
 Este documento describe el proceso de implementación de un balanceador de carga en Google Cloud Platform (GCP). Es parte de un laboratorio práctico en el que se configuró una infraestructura tolerante a fallos basada en instancias de máquinas virtuales ejecutando NGINX.
@@ -26,7 +26,7 @@ Finalmente, descarga y ejecuta el script con estos comandos:
 * ./despliegue_gcp.sh → Ejecuta el script en la terminal.
 
 #### Videos de ejecución:   
-Video de la ejecución del script: [ver aquí](link)   
+Video de la ejecución del script: [ver aquí](https://youtu.be/DdG_CFAcOGc)   
 Video de la ejecución desde la Consola de GCP (Interfaz de Usuario): [ver aquí](https://youtu.be/B_-hMljJ_1Y)   
 
 > [!NOTE]
